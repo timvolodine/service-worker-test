@@ -1,5 +1,6 @@
 console.log("fetch", this.fetch);
 
+clients.claim();
 
 //  return res.text();
   fetch('https://timvolodine.github.io/service-worker-test/sec-breach.html').then(function(res) {
