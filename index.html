@@ -38,16 +38,27 @@
         navigator.serviceWorker.register('sw.js').then(function(registration) {
           console.log('ServiceWorker registration successful with scope: ', registration.scope);
           logToHtml('ServiceWorker registration success with scope ' + registration.scope);
-          registration.addEventListener('message', handleMessage);
         }).catch(function(err) {
           console.log('ServiceWorker registration failed: ', err);
           logToHtml('registration failed: ' + err);
         });
       }
-      
+      /*
+      function postMessageToServiceWorker(registration) {
+        if (registration.installing) {
+           // If ServiceWorkerRegistration.installing is set, then this page isn't actively controlled
+           // by a Service Worker, but one was just installed.
+           registration.installing.postMessage({'message': 'Hello installing Service Worker'});
+        } else if (navigator.serviceWorker.controller) {
+           // If .controller is set, then this page is being actively controlled by the Service Worker.
+           navigator.serviceWorker.controller.postMessage({'message': 'Hello active Service Worker'});
+        }
+      }
+
       function handleMessage(msg) {
         console.log(msg);
       }
+      */
       
       
       
