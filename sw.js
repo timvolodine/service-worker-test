@@ -14,8 +14,6 @@ self.addEventListener('fetch', function(event) {
 
   event.respondWith(new Response("ALOHA!"));
 //  event.respondWith(new Response(res.text()));
-}
-
 
 });
 
