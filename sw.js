@@ -1,6 +1,6 @@
 console.log("fetch", this.fetch);
 
-  fetch('http://www.google.com').then(function(res) {
+  fetch('https://www.google.com').then(function(res) {
   console.log("Response", res);
   return res.text();
 
