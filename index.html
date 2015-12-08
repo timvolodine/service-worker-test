@@ -38,11 +38,18 @@
         navigator.serviceWorker.register('sw.js').then(function(registration) {
           console.log('ServiceWorker registration successful with scope: ', registration.scope);
           logToHtml('ServiceWorker registration success with scope ' + registration.scope);
+          registration.addEventListener('message', handleMessage);
         }).catch(function(err) {
           console.log('ServiceWorker registration failed: ', err);
           logToHtml('registration failed: ' + err);
         });
       }
+      
+      function handleMessage(msg) {
+        console.log(msg);
+      }
+      
+      
       
     </script>
 
