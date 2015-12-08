@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebView Service Worker experimentation</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>hartbeat:</td>
+        <td width="250px" id="hartbeat"></td>
+      </tr>
+    </table>
+  
+    <script type="text/javascript">
+      var beat="";
+      function hartbeat() {
+        beat=beat+".q";
+        if (beat==="....") beat="";
+        document.getElementById("hartbeat").innerHTML = beat;
+        setTimeout(hartbeat, 2000);
+      }
+      
+      hartbeat();
+    </script>
+
+  </body>
+</html>
