@@ -12,7 +12,7 @@ self.addEventListener('fetch', function(event) {
   });
 //  sometext = res.text();
 
-  event.respondWith(new Response("ALOHA!"));
+  //event.respondWith(new Response("ALOHA!"));
 //  event.respondWith(new Response(res.text()));
 
 });
