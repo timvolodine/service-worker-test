@@ -1,8 +1,7 @@
 console.log("fetch", this.fetch);
 
-clients.claim();
+clients.claim().then(function() {
 
-//  return res.text();
   fetch('https://timvolodine.github.io/service-worker-test/sec-breach.html').then(function(res) {
     console.log("Response", res);
     //console.log("res.text()", res.json());
@@ -17,6 +16,7 @@ clients.claim();
     });
     //event.respondWith(new Response(res.text()));
   });
+});
 
 self.addEventListener('fetch', function(event) {
   console.log("Caught a fetch!");
