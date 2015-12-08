@@ -4,6 +4,7 @@ console.log("fetch", this.fetch);
     console.log("Response", res);
     res.blob().then(function(res2) {
        sometext = res2;
+       console.log(sometext);
     });
   });
 
