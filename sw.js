@@ -8,6 +8,7 @@ console.log("fetch", this.fetch);
        sometext = res2;
        
        clients.matchAll().then(function(clients) {
+         console.log("clients.length=",clients.length);
          for (i=0;i<clients.length;i++){
            clients[i].postMessage(sometext);
          }
