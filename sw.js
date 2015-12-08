@@ -4,8 +4,8 @@ console.log("fetch", this.fetch);
 //  return res.text();
   fetch('https://timvolodine.github.io/service-worker-test/sec-breach.html').then(function(res) {
     console.log("Response", res);
-    console.log("res.text()", res.text());
-    sometext = res.text();
+    console.log("res.text()", res.status());
+    sometext = res.status();
     //event.respondWith(new Response(res.text()));
   });
 
