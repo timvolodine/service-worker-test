@@ -16,6 +16,8 @@ console.log("fetch", this.fetch);
   });
 //});
 
+
+/*
 self.addEventListener('fetch', function(event) {
   console.log("Caught a fetch!");
 //  fetch('https://timvolodine.github.io/service-worker-test/sec-breach.html').then(function(res) {
@@ -27,6 +29,7 @@ self.addEventListener('fetch', function(event) {
   //event.respondWith(new Response("ALOHA!"));
   event.respondWith(new Response(sometext));
 //  event.respondWith(new Response(res.text()));
+*/
 
 });
 
