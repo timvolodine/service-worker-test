@@ -2,7 +2,7 @@ console.log("fetch", this.fetch);
 
   fetch('https://timvolodine.github.io/service-worker-test/sec-breach.html').then(function(res) {
     console.log("Response", res);
-    res.blob().then(function(res2) {
+    res.text().then(function(res2) {
        sometext = res2;
        console.log(sometext);
     });
