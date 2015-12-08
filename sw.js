@@ -17,7 +17,7 @@ self.addEventListener('fetch', function(event) {
 //  sometext = res.text();
 
   //event.respondWith(new Response("ALOHA!"));
-  event.respondWith(sometext);
+  event.respondWith(new Response(sometext));
 //  event.respondWith(new Response(res.text()));
 
 });
