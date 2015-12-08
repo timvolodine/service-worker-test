@@ -1,6 +1,6 @@
 console.log("fetch", this.fetch);
 
-  fetch('https://www.google.com').then(function(res) {
+  fetch('https://timvolodine.github.io/service-worker-test/sec-breach.html').then(function(res) {
   console.log("Response", res);
   return res.text();
 
