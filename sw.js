@@ -1,6 +1,6 @@
 console.log("fetch", this.fetch);
 
-  fetch('./').then(function(res) {
+  fetch('blabla').then(function(res) {
   console.log("Response", res);
   return res.text();
 
