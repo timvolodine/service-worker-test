@@ -10,6 +10,8 @@
         <td width="250px" id="hartbeat"></td>
       </tr>
     </table>
+    
+    <button type="button" onclick="register()">register</button>
   
     <script type="text/javascript">
       var beat="";
@@ -21,6 +23,24 @@
       }
       
       hartbeat();
+      
+      function logToHtml(message) {
+          var table = document.getElementById("logTable");
+          var row = table.insertRow(-1);
+          var cell = row.insertCell();
+          cell.innerHTML = message;
+      }
+
+      function register() {
+        navigator.serviceWorker.register('sw.js').then(function(registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          logToHtml('ServiceWorker registration success with scope ' + registration.scope);
+        }).catch(function(err) {
+          console.log('ServiceWorker registration failed: ', err);
+          logToHtml('registration failed: ' + err);
+        });
+      }
+      
     </script>
 
   </body>
