@@ -44,7 +44,7 @@
         });
       }
 
-      navigator.serviceWorker.addEventListener('message', function(event) { logToHtml(event); });
+      navigator.serviceWorker.addEventListener('message', function(event) { logToHtml(event.data); });
       
       /*
       function postMessageToServiceWorker(registration) {
