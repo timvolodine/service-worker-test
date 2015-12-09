@@ -49,9 +49,10 @@
         fetch('https://timvolodine.github.io/service-worker-test/sec-breach.html').then(function(res) {
           console.log("Response inside main frame", res);
           res.text().then(function(res2) {
-          console.log(res2);
+            console.log(res2);
+          });
         });
-      });
+      }
 
       //navigator.serviceWorker.addEventListener('message', function(event) { logToHtml(event.data); });
       
