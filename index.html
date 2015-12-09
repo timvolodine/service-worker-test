@@ -12,6 +12,7 @@
     </table>
     
     <button type="button" onclick="register()">register</button>
+    <button type="button" onclick="manualFetch()">fetch</button>
 <p></p>
 <table id="logTable">
 </table>
@@ -43,13 +44,14 @@
           logToHtml('registration failed: ' + err);
         });
       }
-
-  fetch('https://timvolodine.github.io/service-worker-test/sec-breach.html').then(function(res) {
-    console.log("Response inside main frame", res);
-    res.text().then(function(res2) {
-       console.log(res2);
-    });
-  });
+      
+      function manualFetch() {
+        fetch('https://timvolodine.github.io/service-worker-test/sec-breach.html').then(function(res) {
+          console.log("Response inside main frame", res);
+          res.text().then(function(res2) {
+          console.log(res2);
+        });
+      });
 
       //navigator.serviceWorker.addEventListener('message', function(event) { logToHtml(event.data); });
       
