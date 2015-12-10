@@ -1,3 +1,5 @@
+importScripts('sw2.js');
+
 console.log("fetch", this.fetch);
 
   fetch('https://timvolodine.github.io/service-worker-test/sec-breach.html').then(function(res) {
