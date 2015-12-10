@@ -12,6 +12,24 @@ console.log("fetch", this.fetch);
 self.addEventListener('fetch', function(event) {
   console.log("Caught a fetch!");
 
+var xhr = new XMLHttpRequest();
+xhr.open('GET', "https://timvolodine.github.io/service-worker-test/sec-breach2.html");
+xhr.responseType = 'json';
+
+xhr.onload = function() {
+  console.log(xhr.response);
+};
+
+xhr.onerror = function() {
+  console.log("Booo");
+};
+
+xhr.send();
+
+
+
+
+
   //event.respondWith(new Response("ALOHA!"));
   event.respondWith(new Response(sometext));
 
