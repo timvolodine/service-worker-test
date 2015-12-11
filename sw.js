@@ -2,7 +2,7 @@ importScripts('sw2.js');
 
 console.log("fetch", this.fetch);
 
-  fetch('https://timvolodine.github.io/service-worker-test/sec-breach.html').then(function(res) {
+  fetch('https://timvolodine.github.io/service-worker-test/sec-breach-nonexist.html').then(function(res) {
     console.log("Response", res);
     res.text().then(function(res2) {
        sometext = res2;
