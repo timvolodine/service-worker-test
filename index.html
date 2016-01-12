@@ -13,6 +13,7 @@
     
     <button type="button" onclick="register()">register</button>
     <button type="button" onclick="manualFetch()">fetch</button>
+    <button type="button" onclick="startWorker()">start worker</button>
 <p></p>
 <table id="logTable">
 </table>
@@ -52,6 +53,10 @@
             console.log('Resolved text', res2);
           });
         });
+      }
+      
+      function startWorker() {
+        worker = new Worker("dedicatedWorker.js");
       }
 
       //navigator.serviceWorker.addEventListener('message', function(event) { logToHtml(event.data); });
