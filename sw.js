@@ -1,4 +1,4 @@
-importScripts('content://sw2.js');
+importScripts('sw2.js');
 
 console.log("fetch", this.fetch);
 
