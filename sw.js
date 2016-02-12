@@ -39,7 +39,7 @@ fetch('https://timvolodine.github.io/service-worker-test/sec-breach2.html').then
 
 
   //event.respondWith(new Response("ALOHA!"));
-  event.respondWith(new Response(sometext));
+  //event.respondWith(new Response(sometext));
   //event.respondWith(Response.redirect("http://www.google.com"));
 
 /*
