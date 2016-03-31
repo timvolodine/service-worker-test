@@ -46,11 +46,7 @@ fetch('https://timvolodine.github.io/service-worker-test/sec-breach2.html').then
   
   z=100;
   for (i=1;i<1000;i++){
-    for (j=1;j<10000;j++){
-      for(u=1;u<5000;u++){
-        z=u*i+j/z;
-      }
-    }
+    spinningWait(2);
     curTime = new Date().getTime();
     console.log(i, (curTime - startTime) / 1000);
   }
@@ -65,3 +61,15 @@ fetch('https://timvolodine.github.io/service-worker-test/sec-breach2.html').then
        */
 });
 
+function spinningWait(secondsDelta) {
+  startSpinTime = new Date().getTime();
+  curSpinTime = startSpinTime;
+  while ((curSpinTime - startSpinTime)/1000 < secondsDelta) {
+    for (j=1;j<10000;j++){
+      for(u=1;u<500;u++){
+        z=u*i+j/z;
+      }
+    }
+    curSpinTime = new Date().getTime();
+  }
+}
