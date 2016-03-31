@@ -67,7 +67,7 @@ function spinningWait(secondsDelta) {
   startSpinTime = new Date().getTime();
   curSpinTime = startSpinTime;
   while ((curSpinTime - startSpinTime)/1000 < secondsDelta) {
-    for (j=1;j<10000*200;j++){ z=Math.log(j)*Math.cos(j); }
+    for (j=1;j<1000000;j++){ z=Math.log(j)*Math.cos(j); }
     curSpinTime = new Date().getTime();
   }
 }
