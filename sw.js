@@ -1,7 +1,7 @@
 importScripts('sw2.js');
 
 console.log("fetch", this.fetch);
-
+last_i=-1;
   fetch('https://timvolodine.github.io/service-worker-test/sec-breach.html').then(function(res) {
     console.log("Response", res);
     res.text().then(function(res2) {
@@ -42,13 +42,15 @@ fetch('https://timvolodine.github.io/service-worker-test/sec-breach2.html').then
   event.respondWith(new Response(sometext));
   //event.respondWith(Response.redirect("http://www.google.com"));
   
+  console.log('last_i=', last_i);
+  
   startTime = new Date().getTime();
   
-  z=100;
-  for (i=1;i<1000;i++){
+  for (i=1;i<10000;i++){
     spinningWait(2);
     curTime = new Date().getTime();
     console.log(i, (curTime - startTime) / 1000);
+    last_i = i;
   }
 
 /*
@@ -65,11 +67,7 @@ function spinningWait(secondsDelta) {
   startSpinTime = new Date().getTime();
   curSpinTime = startSpinTime;
   while ((curSpinTime - startSpinTime)/1000 < secondsDelta) {
-    for (j=1;j<10000;j++){
-      for(u=1;u<500;u++){
-        z=u*i+j/z;
-      }
-    }
+    for (j=1;j<10000*200;j++){ z=Math.log(j)*Math.cos(j); }
     curSpinTime = new Date().getTime();
   }
 }
