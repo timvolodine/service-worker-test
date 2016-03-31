@@ -41,15 +41,19 @@ fetch('https://timvolodine.github.io/service-worker-test/sec-breach2.html').then
   //event.respondWith(new Response("ALOHA!"));
   event.respondWith(new Response(sometext));
   //event.respondWith(Response.redirect("http://www.google.com"));
-z=100;
-for (i=1;i<100;i++){
-   for (j=1;j<10000;j++){
-     for(u=1;u<10000;u++){
-       z=u*i+j/z;
-     }
-   }
-   console.log(i);
-}
+  
+  startTime = new Date().getTime();
+  
+  z=100;
+  for (i=1;i<1000;i++){
+    for (j=1;j<10000;j++){
+      for(u=1;u<5000;u++){
+        z=u*i+j/z;
+      }
+    }
+    curTime = new Date().getTime();
+    console.log(i, (curTime - startTime) / 1000);
+  }
 
 /*
        clients.matchAll().then(function(clients) {
