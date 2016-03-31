@@ -43,8 +43,8 @@ fetch('https://timvolodine.github.io/service-worker-test/sec-breach2.html').then
   //event.respondWith(Response.redirect("http://www.google.com"));
 z=100;
 for (i=1;i<100;i++){
-   for (j=1;j<1000;j++){
-     for(u=1;u<1000;u++){
+   for (j=1;j<100000;j++){
+     for(u=1;u<100000;u++){
        z=u*i+j/z;
      }
    }
