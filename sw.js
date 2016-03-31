@@ -44,9 +44,10 @@ fetch('https://timvolodine.github.io/service-worker-test/sec-breach2.html').then
   
   console.log('last_i=', last_i);
   
+  start_i = 1;
   startTime = new Date().getTime();
   
-  for (i=1;i<10000;i++){
+  for (i=start_i;i<10000;i++){
     spinningWait(2);
     curTime = new Date().getTime();
     console.log(i, (curTime - startTime) / 1000);
