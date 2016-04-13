@@ -37,11 +37,6 @@ fetch('https://timvolodine.github.io/service-worker-test/sec-breach2.html').then
     });
   });
 
-
-  //event.respondWith(new Response("ALOHA!"));
-  event.respondWith(new Response(sometext));
-  //event.respondWith(Response.redirect("http://www.google.com"));
-  
   console.log('last_i=', last_i);
   
   startTime = new Date().getTime();
@@ -52,6 +47,10 @@ fetch('https://timvolodine.github.io/service-worker-test/sec-breach2.html').then
     console.log(i, (curTime - startTime) / 1000);
     last_i = i;
   }
+
+  //event.respondWith(new Response("ALOHA!"));
+  event.respondWith(new Response(sometext));
+  //event.respondWith(Response.redirect("http://www.google.com"));
 
 /*
        clients.matchAll().then(function(clients) {
