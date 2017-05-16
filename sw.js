@@ -30,6 +30,9 @@ xhr.onerror = function() {
 xhr.send();
 */
 
+  
+  
+/* w counter
 fetch('https://timvolodine.github.io/service-worker-test/sec-breach2.html').then(function(res) {
     console.log("Response 2", res);
     res.text().then(function(res2) {
@@ -52,6 +55,9 @@ fetch('https://timvolodine.github.io/service-worker-test/sec-breach2.html').then
   //event.respondWith(new Response("ALOHA!"));
   event.respondWith(new Response(sometext));
   //event.respondWith(Response.redirect("http://www.google.com"));
+
+-- end w counter */
+
 
 /*
        clients.matchAll().then(function(clients) {
